@@ -1,0 +1,12 @@
+sudo: false
+language: generic
+script:
+- touch hola.tar.gz
+- echo hola
+deploy:
+  provider: releases
+  api_key:
+    secure: N57rMiE5HbysmyXDoNbixaJqPZmgF09bgPZdNrY+wS0iDOnzP3qaL4fe7RosCDMv3WbxA0Eq/VF7RfqxKSh6GJDWS9FUiwnGKcBAygbUt0zbXz5liYwV/BFyjgVqAnDYFZeFP93dtueDOx31+Q853ZK8h2iQm7T83FaR6ZLpUDCnjPfk2kbrCRqUW1G+7zNH+6qZipsG+glg3vvQEvIiQwcVoDeG9Z8iJudck1JYnJQSq/EBWBdRGduBGHPTbk64yMyiWBuNdHVAi+Hc73Qu5AKnVE+xBvuCj1Cmxms9mJXzEVgxC7XhhVZny2YsRitJoulE/nRfB1+sJDA8TfjVuCbc4vJHnutAfVsgiq3nNE4JCsd3rtV0/ky90p/NuxQ205Uv14v5gvtWF02YhI0vDYuB+BAsdk4I1srTqxGUr24+BDgom08X8rhOssawN3w7AAsSfQ4z9JiAydCIoyv/HYmDOxxktnKu5t5K2kZe02iYzJJA+HDgb3wJv/P1kHn2GxOObe92DybiCxScSl2b4ud5AUZM+vbe37m8XKpbFkfm7YPsPbfIb8R/7OIJdkin/irv1C+0i+hu6wgdbt8TfS1g+6eyPvaAv2uxSbhlqU2fvOdGmkroB2XuNebRCmNE0uW+xlBlpyinIh9VIzJiEpXdlxf0ETMvqdvtsdskdkA=
+  file: hola.tar.gz
+  on:
+    repo: MariadeAnton/github-releases
